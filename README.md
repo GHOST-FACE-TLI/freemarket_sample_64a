@@ -24,3 +24,4 @@ Things you may want to cover:
 * ...
 # freemarket_sample_64a
 test
+こんにちは！この文章は川野がテストで入れました！
