@@ -3,6 +3,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
+|item|string|null: false|
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
