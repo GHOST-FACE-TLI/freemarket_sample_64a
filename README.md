@@ -27,7 +27,7 @@
 - belongs_to :shipping-day
 - belongs_to :user
 - has_many :goods
-- has_many :evaluations
+- belongs_to :evaluation
 - belongs_to :status
 
 
