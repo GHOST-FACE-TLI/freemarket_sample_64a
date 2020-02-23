@@ -18,9 +18,9 @@
 
 
 #Association
--belongs_to :user
--has_many :goods
--has_one :price
+- belongs_to :user
+- has_many :goods
+- has_one :price
 
 
 
