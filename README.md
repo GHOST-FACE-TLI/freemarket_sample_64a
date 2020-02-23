@@ -23,4 +23,72 @@ Things you may want to cover:
 
 * ...
 # freemarket_sample_64a
-test
+
+
+# large_categoryテーブル
+
+|Column|Type|Options|
+|------|----|------|
+|item|reference|foreign_key: true, null: false|
+|name|string|
+
+### Association
+- has_many :items
+
+
+## medium_categoryテーブル
+
+|Column|Type|Options|
+|------|----|------|
+|item|reference|foreign_key: true, null: false|
+|name|string|
+
+### Association
+- has_many :items
+
+
+## small_categoryテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|item|reference|foreign_key: true, null: false|
+|name|string|
+### Association
+- has_many :items
+
+
+## brandテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|item|reference|foreign_key: true, null: false|
+|name|string|
+
+### Association
+- has_many :items
+
+## placeテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|user|reference|foreign_key: true, null: false|
+|postalcodes|integer|
+|Prefectures|string|
+|Municipalities|string|
+|numbers|string|
+|buildings|string|
+|emergency contact|integer|
+
+### Association
+- belongs_to :user
+
+## goodテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|user|reference|foreign_key: true, null: false|
+|item|reference|foreign_key: true, null: false|
+
+### Association
+- belongs_to :user
+- belongs_to :item
