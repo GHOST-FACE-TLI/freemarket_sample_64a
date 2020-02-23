@@ -2,8 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item|string|null: false|
+|item|references||
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
@@ -14,15 +13,15 @@
 |birthday|integer|null: false|
 |phone|integer|null: false|
 |address|string|null: false|
-|profile|string| |
+|profile|text| |
 |image|string| |
-|credit|integer| |
-|place|string| |
+|credit|references| |
+|place|references| |
 |sales|integer| |
 |sex|string|null: false|
 |good|integer||
 |sell|string|null: false|　
-|purchase|string|null: false, foreign_key: true|
+|buy|string|null: false, foreign_key: true|
 
   Association
 - has_many :items
@@ -34,9 +33,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|condition_id|integer| |
 |name|string| |
-|item_id|integer| |
+|item|references| |
 
   Association
 - has_many :items
@@ -45,9 +43,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|item_id|integer| |
-|postage_id|integer| |
-|price|integer| |
+|item|references| |
+|send|string| |
 
   Association
 - has_many :items
