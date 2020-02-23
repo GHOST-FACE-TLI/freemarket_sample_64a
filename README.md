@@ -28,33 +28,32 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|------|
-|largecategory_id|reference|foreign_key: true, null: false|
-|item_id|reference|foreign_key: true, null: false|
+|item|reference|foreign_key: true, null: false|
+|name|string|
 
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## medium_categoryテーブル
 
 |Column|Type|Options|
 |------|----|------|
-|mediumcategory_id|reference|foreign_key: true, null: false|
-|item_id|reference|foreign_key: true, null: false|
+|item|reference|foreign_key: true, null: false|
+|name|string|
 
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## small_categoryテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|smallcategory_id|reference|foreign_key: true, null: false|
-|item_id|reference|foreign_key: true, null: false|
-
+|item|reference|foreign_key: true, null: false|
+|name|string|
 ### Association
-- belongs_to :item
+- has_many :items
 
 
 ## brandテーブル
@@ -72,8 +71,8 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|user_id|reference|foreign_key: true, null: false|
-|place_id|reference|forign_key: true, null: false|
+|user|reference|foreign_key: true, null: false|
+|place|reference|forign_key: true, null: false|
 |postalcodes|integer|
 |Prefectures|string|
 |Municipalities|string|
@@ -88,9 +87,9 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|good_id|reference|foreign_key: true, null: false|
-|user_id|reference|foreign_key: true, null: false|
-|item_id|reference|foreign_key: true, null: false|
+|good|reference|foreign_key: true, null: false|
+|user|reference|foreign_key: true, null: false|
+|item|reference|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
