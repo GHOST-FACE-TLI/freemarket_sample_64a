@@ -60,7 +60,6 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|brand_id|reference|foreign_key: true, null: false|
 |item|reference|foreign_key: true, null: false|
 |name|string|
 
@@ -72,7 +71,6 @@ Things you may want to cover:
 |Column|Type|Option|
 |------|----|------|
 |user|reference|foreign_key: true, null: false|
-|place|reference|forign_key: true, null: false|
 |postalcodes|integer|
 |Prefectures|string|
 |Municipalities|string|
@@ -87,7 +85,6 @@ Things you may want to cover:
 
 |Column|Type|Option|
 |------|----|------|
-|good|reference|foreign_key: true, null: false|
 |user|reference|foreign_key: true, null: false|
 |item|reference|foreign_key: true, null: false|
 
