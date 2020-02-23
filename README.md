@@ -22,6 +22,7 @@
 |good|references||
 |sell|string|null: false|　
 |buy|string|null: false, foreign_key: true|
+|evaluation|references| |
 
   Association
 - belongs_to :place
