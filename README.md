@@ -24,10 +24,10 @@
 |purchase|string|null: false, foreign_key: true|
 
   Association
-- has_many :item
-- has_many :good
-- has_many :sell
-- has_many :buy
+- has_many :items
+- has_many :goods
+- has_many :sells
+- has_many :buys
 
 ##  conditionテーブル
 
@@ -38,7 +38,7 @@
 |item_id|integer| |
 
   Association
-- has_many :item
+- has_many :items
 
 ##  postageテーブル
 
@@ -49,4 +49,4 @@
 |price|integer| |
 
   Association
-- has_many :item
+- has_many :itemss
