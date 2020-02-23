@@ -6,10 +6,11 @@
 |nickname|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false|
-|last name｜string｜null: false｜
-|name|string｜null: false｜
-|kana|string｜null: false｜
-|birthday|integer|null: false｜
+|last name|string|null: false|
+|fastname|string|null: false|
+|kana lastname|string|null: false|
+|kana fastname|string|null: false|
+|birthday|integer|null: false|
 |phone|integer|null: false|
 |address|string|null: false|
 |profile|string| |
