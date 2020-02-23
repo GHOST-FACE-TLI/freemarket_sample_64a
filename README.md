@@ -49,4 +49,4 @@
 |price|integer| |
 
   Association
-- has_many :itemss
+- has_many :items
