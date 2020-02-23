@@ -10,21 +10,21 @@
 |brand|references|null: false, foreign_key: true|
 |condition|references|null: false, foreign_key: true|
 |postage|references|null: false, foreign_key: true|
-|shipping-days|references|null: false, foreign_key: true|
+|shipping-day|references|null: false, foreign_key: true|
 |price|integer|null: false|
 |good|references|null: false, foreign_key: true|
 |evaluation|references|null: false, foreign_key: true|
 |status|references|null: false|
 
 
-#Association
+## Association
 - belongs_to :large_category
 - belongs_to :medium_category
 - belongs_to :small_category
 - belongs_to :brand
 - has_one :condition
 - has_one :postage
-- has_one :shipping-days
+- has_one :shipping-day
 - has_one :price
 - belongs_to :user
 - has_many :goods
