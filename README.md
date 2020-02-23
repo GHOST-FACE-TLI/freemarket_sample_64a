@@ -1,26 +1,52 @@
-# README
+##  usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|item|references||
+|nickname|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+|last name|string|null: false|
+|fastname|string|null: false|
+|kana lastname|string|null: false|
+|kana fastname|string|null: false|
+|birthday|integer|null: false|
+|phone|integer|null: false|
+|address|string|null: false|
+|profile|text| |
+|image|string| |
+|credit|references| |
+|place|references| |
+|sales|integer| |
+|sex|string|null: false|
+|good|references||
+|sell|string|null: false|　
+|buy|string|null: false, foreign_key: true|
+|evaluation|references| |
 
-Things you may want to cover:
+  Association
+- belongs_to :place
+- has_many :items
+- has_many :goods
+- has_many :sells
+- has_many :buys
 
-* Ruby version
+##  conditionテーブル
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|name|string| |
+|item|references| |
 
-* Configuration
+  Association
+- has_many :items
 
-* Database creation
+##  postageテーブル
 
-* Database initialization
+|Column|Type|Options|
+|------|----|-------|
+|item|references| |
+|send|string| |
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# freemarket_sample_64a
-test
+  Association
+- has_many :items
