@@ -61,7 +61,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |brand_id|reference|foreign_key: true, null: false|
-|item_id|reference|foreign_key: true, null: false|
+|item|reference|foreign_key: true, null: false|
 |name|string|
 
 ### Association
