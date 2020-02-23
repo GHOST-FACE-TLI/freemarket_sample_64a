@@ -1,26 +1,27 @@
-# README
+## itemsテーブル
+|Column|Type|Options|
+|------|----|-------|
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<!-- 枚数制限 -->
+|image|string|null: false|
+|name|string|null: false|
+|description|text|null: false|
+|category_id|integer|null: false, foreign_key: true|
+|brand_id|integer|null: false, foreign_key: true|
+|condition_id|integer|null: false, foreign_key: true|
+|postage_id|integer|null: false, foreign_key: true|
+<!-- 発送元・発送先住所 -->
+|place_id|integer|null: false, foreign_key: true|
+|shipping-days_id|integer|null: false, foreign_key: true|
+|price|integer|null: false|
+<!-- 中間テーブル？ -->
+|good_id|integer|
+|evaluation_id|integer|null: false|
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# freemarket_sample_64a
-test
+<!-- 商品登録日(自動生成のため不要) -->
