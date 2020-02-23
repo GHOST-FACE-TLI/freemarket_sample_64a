@@ -24,6 +24,7 @@ Things you may want to cover:
 * ...
 # freemarket_sample_64a
 
+
 # large_categoryテーブル
 
 |Column|Type|Options|
