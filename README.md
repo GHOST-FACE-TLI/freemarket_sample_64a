@@ -1,4 +1,4 @@
-  usersテーブル
+##  usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -29,7 +29,7 @@
 - has_many :sell
 - has_many :buy
 
-  conditionテーブル
+##  conditionテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -40,7 +40,7 @@
   Association
 - has_many :item
 
-  postageテーブル
+##  postageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
