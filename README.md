@@ -22,14 +22,13 @@
 - belongs_to :medium_category
 - belongs_to :small_category
 - belongs_to :brand
-- has_one :condition
-- has_one :postage
-- has_one :shipping-day
-- has_one :price
+- belongs_to :condition
+- belongs_to :postage
+- belongs_to :shipping-day
 - belongs_to :user
 - has_many :goods
 - has_many :evaluations
-- has_one :status
+- belongs_to :status
 
 
 
