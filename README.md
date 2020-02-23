@@ -23,5 +23,55 @@ Things you may want to cover:
 
 * ...
 # freemarket_sample_64a
-test
-こんにちは！この文章は川野がテストで入れました！
+
+# large_categoryテーブル
+
+|Column|Type|Options|
+|------|----|------|
+|largecategory_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
+
+## medium_categoryテーブル
+
+|Column|Type|Options|
+|------|----|------|
+|mediumcategory_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
+
+## small_categoryテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|smallcategory_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
+
+
+## brandテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|brand_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
+|name|string|
+
+
+## placeテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|user_id|integer|foreign_key: true|
+|place_id|integer|forign_key: true|
+|postalcodes|integer|
+|Prefectures|string|
+|Municipalities|string|
+|numbers|string|
+|buildings|string|
+|emergency contact|integer|
+
+## goodテーブル
+
+|Column|Type|Option|
+|------|----|------|
+|good_id|integer|foreign_key: true|
+|user_id|integer|foreign_key: true|
+|item_id|integer|foreign_key: true|
