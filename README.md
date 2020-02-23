@@ -24,7 +24,7 @@
 |buy|string|null: false, foreign_key: true|
 
   Association
-- be_longs :place
+- belongs_to :place
 - has_many :items
 - has_many :goods
 - has_many :sells
