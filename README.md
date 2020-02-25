@@ -15,6 +15,8 @@
 |good|references|null: false, foreign_key: true|
 |evaluation|references|null: false, foreign_key: true|
 |status|references|null: false|
+|seller|references|null: false, foreign_key: { to_table: :users }|
+|buyer|references|foreign_key: { to_table: :users }|
 
 
 ## Association
@@ -29,6 +31,7 @@
 - has_many :goods
 - belongs_to :evaluation
 - belongs_to :status
+
 
 
 
