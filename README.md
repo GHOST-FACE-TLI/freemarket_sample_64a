@@ -16,6 +16,9 @@
 |status|references|null: false|
 |seller|references|null: false, foreign_key: { to_table: :users }|
 |buyer|references|foreign_key: { to_table: :users }|
+|seller|references|null: false, foreign_key: { to_table: :users }|
+|buyer|references|null: false, foreign_key: { to_table: :users }|
+|dealing_stage|references|null: false, foreign_key: true|
 
 
 ## Association
@@ -32,13 +35,14 @@
 - belongs_to :status
 - has_many :users, through: :goods
 - has_many :images
+- has_one :dealing_stage
 
 
 ## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item|references|null: false, foreign_key: true|
-|image|string|
+|image|string|null: false|
 
 ## Association
 - belongs_to :item
