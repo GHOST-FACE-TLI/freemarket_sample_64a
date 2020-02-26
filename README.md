@@ -48,6 +48,14 @@
 - belongs_to :item
 
 
+## dealing_stagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+## Association
+- has_many :items
+
 
 
 
