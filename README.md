@@ -1,6 +1,6 @@
 # README
 
-#  usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item|references||
@@ -26,17 +26,16 @@
 |great|references|foreign_key: { to_table: :evaluation } |
 |natural|references|foreign_key: { to_table: :evaluation } |
 |bad|references|foreign_key: { to_table: :evaluation } |
-
-##  Association
+### Association
 - belongs_to :place
 - has_many :items
 - has_many :goods
 - has_many :sells
 - has_many :buys
-- has_many :evaluations
+- has_many :evaluations, through: :evalutaions_users
 
 
-# itemsテーブル
+## itemsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|null: false|
@@ -55,9 +54,7 @@
 |status|references|null: false|
 |seller|references|null: false, foreign_key: { to_table: :users }|
 |buyer|references|foreign_key: { to_table: :users }|
-
-
-## Association
+### Association
 - belongs_to :large_category
 - belongs_to :medium_category
 - belongs_to :small_category
@@ -70,71 +67,57 @@
 - belongs_to :evaluation
 - belongs_to :status
 
-#  conditionテーブル
-
+## conditionテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string| |
 |item|references| |
-
-##  Association
+### Association
 - has_many :items
 
-#  postageテーブル
-
+## postageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item|references| |
 |send|string| |
-
-## Association
+### Association
 - has_many :items
 
-# large_categoryテーブル
-
+## large_categoryテーブル
 |Column|Type|Options|
 |------|----|------|
 |item|reference|foreign_key: true, null: false|
 |name|string|
-
-## Association
+### Association
 - has_many :items
 
 
-# medium_categoryテーブル
-
+## medium_categoryテーブル
 |Column|Type|Options|
 |------|----|------|
 |item|reference|foreign_key: true, null: false|
 |name|string|
-
-## Association
+### Association
 - has_many :items
 
-
-# small_categoryテーブル
-
+## small_categoryテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item|reference|foreign_key: true, null: false|
 |name|string|
-
-## Association
+### Association
 - has_many :items
 
 
-# brandテーブル
-
+## brandテーブル
 |Column|Type|Options|
 |------|----|-------|
 |item|reference|foreign_key: true, null: false|
 |name|string|
-
-## Association
+### Association
 - has_many :items
 
-# placeテーブル
-
+## placeテーブル
 |Column|Type|Option|
 |------|----|------|
 |user|reference|foreign_key: true, null: false|
@@ -144,29 +127,33 @@
 |numbers|string|
 |buildings|string|
 |emergency contact|integer|
-
-## Association
+### Association
 - belongs_to :user
 
-# goodテーブル
-
+## goodテーブル
 |Column|Type|Option|
 |------|----|------|
 |user|reference|foreign_key: true, null: false|
 |item|reference|foreign_key: true, null: false|
-
-## Association
+### Association
 - belongs_to :user
 - belongs_to :item
 
-# evaluationテーブル
-
+## evaluationテーブル
 |Column|Type|Option|
 |------|----|------|
 |user|reference|foreign_key: true, null: false|
 |item|reference|foreign_key: true, null: false|
 |evaluation||
-
-## Association
-- has_many :users
+### Association
+- has_many :users, through: :evalutaions_users
 - has_many :items
+
+## evaluations_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user|references|null: false, foreign_key: true|
+|evaluation|references|null: false, foreign_key: true|
+### Association
+- belongs_to :evaluation
+- belongs_to :user
