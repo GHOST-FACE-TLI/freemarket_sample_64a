@@ -57,8 +57,21 @@
 - has_many :items
 
 
+## evaluationsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|evaluated_user|references|null: false, foreign_key: { to_table: :users }|
+|evaluation_grade|references|null: false, foreign_key: true|
+
+## Association
+- belongs_to :user
+- belongs_to :evaluation_grade
 
 
+## evaluation_gradesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|evaluation_grade|string|null: false|
 
-
-
+## Association
+- has_many :evaluations
