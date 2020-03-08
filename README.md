@@ -41,7 +41,9 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|------|
 |item|reference|foreign_key: true, null: false|
+|small_category|reference|foreign_key: true, null: false|
 |name|string|
+
 
 ### Association
 - has_many :items
@@ -52,6 +54,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |item|reference|foreign_key: true, null: false|
+|medium_category|reference|foreign_key: true, null: false|
+
 |name|string|
 ### Association
 - has_many :items
